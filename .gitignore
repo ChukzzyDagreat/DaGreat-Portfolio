@@ -1,0 +1,27 @@
+# Node (if any)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# env
+.env
+
+# build
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+
+# personal media you don't want in the repo
+Pictures/
+Videos/
+snap/
+UrbanTerror.zip

@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  background: rgb(0, 0, 19);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page_header {
+  width: 90%;
+  max-width: 50em;
+  height: 4em;
+  background: #d4d1ff0e;
+  color: #fff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: fixed;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.page_header button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.page_header button {
+  flex: 0 0 auto;
+  font-size: 15px;
+  width: 6em;
+  height: 2.4em;
+  border: 1px solid #ffffff62;
+  border-radius: 7px;
+  -moz-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  filter: saturate(0.5);
+  box-shadow: 0px 5px 10px rgba(207, 207, 207, 0.159);
+  background: linear-gradient(
+    45deg,
+    rgba(81, 122, 255, 0.5),
+    rgba(250, 117, 255, 0.6)
+  );
+  overflow: hidden;
+}
+.page_header button:hover {
+  box-shadow: 0px 5px 10px rgba(247, 0, 255, 0.427);
+  transform: translateY(-5px);
+  filter: saturate(1);
+  position: relative;
+}
+.page_header button::before {
+  content: "";
+  width: 40%;
+  height: 400%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffffff30;
+  transform: skewX(-45deg) translate(-50%);
+  animation: glowmove2 0.3s linear forwards;
+  -webkit-animation: glowmove2 0.3s linear forwards;
+}
+@keyframes glowmove2 {
+  from {
+    transform: skewX(-45deg) translate(600%);
+  }
+  to {
+    transform: skewX(-45deg) translate(-50%);
+  }
+}
+.page_header nav li:hover::before {
+  animation: glowmove 0.3s linear forwards;
+  -webkit-animation: glowmove 0.3s linear forwards;
+}
+@keyframes glowmove {
+  to {
+    transform: skewX(-45deg) translate(600%);
+  }
+}
+
+.container {
+  padding-top: 10em;
+}
+.container section {
+  margin-top: 0;
+}
+
+.my_info {
+  width: 95%;
+  max-width: 500px;
+  height: 100px;
+  position: absolute;
+  top: 6em;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translateX(-50%);
+}
+.about_avatar {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 8px rgb(0, 0, 0, 0.2);
+  border-radius: 50%;
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: url(../assets/images/me.png),linear-gradient(45deg,#d4d,#1100ff) no-repeat center;
+  background-size: cover;
+  transition: 0.3s;
+}
+.about_avatar:hover {
+  transform: translateX(-50%) translateY(-50%) scale(1.07);
+}
+.my_info .about_name {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.my_fullName {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.about_name .title {
+  left: 50%;
+  font-size: 11px;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin-top: -1.4em;
+}
+
+main {
+  margin-top: 5em;
+}
+section {
+  width: 96%;
+  max-width: 800px;
+  padding: 1em 0;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 0;
+}
+
+section p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #d4d1ffd5;
+}
+
+/* Footer styling and display */
+footer {
+  width: 100%;
+  height: 5em;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+@media only screen and (min-width: 600px) {
+  .page_header nav li {
+    width: 10em;
+    height: 2.8em;
+    font-size: 16px;
+  }
+}
