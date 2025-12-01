@@ -48,6 +48,7 @@ function scrollFunction() {
     me2.style.width = "60%";
     me2.style.position = "relative";
     me2.style.marginTop = "-2em";
+    me2.style.top = "unset";
     me2.style.zIndex = "1";
     toTop.style.opacity = "0";
   }
@@ -150,20 +151,18 @@ const observer6 = new IntersectionObserver(
 );
 observer6.observe(contact);
 
-
-
 // form validation code
 // js/contact.js
-const hireMeBg = document.querySelector('.hire_me_bg');
-const openHireMe = document.querySelector('.hire_me')
-const closeHireMe = document.querySelector('.close')
+const hireMeBg = document.querySelector(".hire_me_bg");
+const openHireMe = document.querySelector(".hire_me");
+const closeHireMe = document.querySelector(".close");
 
-openHireMe.addEventListener('click', () =>{
-  hireMeBg.classList.add('formAppear');
+openHireMe.addEventListener("click", () => {
+  hireMeBg.style.display = "block";
 });
 
-closeHireMe.addEventListener('click', () =>{
-  hireMeBg.classList.remove('formAppear');
+closeHireMe.addEventListener("click", () => {
+  hireMeBg.style.display = "none";
 });
 
 //contact me / hire me form validation code
